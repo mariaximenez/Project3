@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 
 
 export default function Home () {
-const [data, setData] = useState([{data}])
+const [data, setData] = useState([])
   //function to fetch facility data
 const getData = async () => {
     try {
@@ -29,11 +29,9 @@ return (
     <Link to={`/:id/${ data.id}`} key={ data.id }></Link>
         return (
           <div>
-                <h1>Sanity Check</h1>
                 <h1>{data.organizationname}</h1>
                 <h2>{data.borough}</h2>
                 <h3>{data.description}</h3>
-                <p>{data}</p>
             </div>
         )
       })}
