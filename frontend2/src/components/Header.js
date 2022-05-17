@@ -19,8 +19,23 @@ function Header (props) {
                 <Link to="/borough">
                     <div>By Borough</div>
                 </Link>
-                <Link to ="/category">
-                    <div>By Category</div>
+                <Link to ="/facility">
+                    <div>Facility Dropdown Menu</div>
+                </Link>
+                <Link to ="/bronx">
+                    <div>Bronx Facilities</div>
+                </Link>
+                <Link to ="/brooklyn">
+                    <div>Brooklyn Facilities</div>
+                </Link>
+                <Link to ="/manhattan">
+                    <div>Manhattan Facilities</div>
+                </Link>
+                <Link to ="/statenisland">
+                    <div>Staten Island Facilities</div>
+                </Link>
+                <Link to ="/queens">
+                    <div>Queens Facilities</div>
                 </Link>
             </nav>
             </header>

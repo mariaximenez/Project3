@@ -6,7 +6,7 @@ import '../index.css';
 import SearchBar from '../components/SearchBar'
 
 
-export default function Home () {
+function FacilityList () {
 const [data, setData] = useState([])
 const getData = async () => {
     try {
@@ -25,7 +25,10 @@ useEffect(() => {
     getData(); }, []);
 return (
   <div className= "app">
-
+    <SearchBar placeholder= "Enter facility name" data={data}/>
   </div>
 );
     }
+
+
+export default FacilityList

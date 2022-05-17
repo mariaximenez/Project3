@@ -1,12 +1,17 @@
 import React from 'react'
 import Home from './pages/Home'
 import BoroughList from './pages/BoroughList'
-import CategoryList from './pages/CategoryList'
+import FacilityList from './pages/FacilityList'
 import Show from './pages/Show'
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { Route, Routes } from "react-router-dom";
 import './index.css';
+import Bronx from './pages/Bronx'
+import Brooklyn from './pages/Brooklyn'
+import Manhattan from './pages/Manhattan'
+import StatenIsland from './pages/StatenIsland'
+import Queens from './pages/Queens'
 
 const App = () => {
     const URL = "https://data.cityofnewyork.us/resource/pqg4-dm6b.json/";
@@ -16,8 +21,13 @@ const App = () => {
      <Routes>
          <Route exact path="/" element={<Home URL={URL}/>}/>
          <Route path="/borough" element={<BoroughList URL={URL}/>}/>
-         <Route path="/category"  element= {<CategoryList URL={URL}/>}/>
+         <Route path="/facility"  element= {<FacilityList URL={URL}/>}/>
          <Route path="/:id"  element= {<Show URL={URL}/>}/>
+         <Route path="/bronx"  element= {<Bronx URL={URL}/>}/>
+         <Route path="/brooklyn"  element= {<Brooklyn URL={URL}/>}/>
+         <Route path="/manhattan"  element= {<Manhattan URL={URL}/>}/>
+         <Route path="/statenisland"  element= {<StatenIsland URL={URL}/>}/>
+         <Route path="/queens"  element= {<Queens URL={URL}/>}/>
      </Routes>
    
      <Footer/>
