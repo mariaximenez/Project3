@@ -1,8 +1,8 @@
 import React from 'react';
 import {useState} from 'react';
 import {useEffect} from 'react';
-import {Link} from 'react-router-dom';
-
+import {Link} from 'react-router-dom'
+import './index.css';
 
 
 export default function Home () {
@@ -24,17 +24,16 @@ const getData = async () => {
 useEffect(() => {
     getData(); }, []);
 return (
-    <div>
-      {data.map((data) => {
-    <Link to={`/:id/${ data.id}`} key={ data.id }></Link>
-        return (
-          <div>
-                <h1>{data.organizationname}</h1>
-                <h2>{data.borough}</h2>
-                <h3>{data.description}</h3>
-            </div>
-        )
-      })}
-    </div>
+  <div className='app'>
+  <input placeholder="Search" onChange={event => setData(event.target.value)}/>
+  {
+      data.map((post, index) => {
+        <div key={index}>
+          <p>{data.organizationnamw}</p>
+          <p>{data.borough}</p>
+  </div>
+      })
+    }
+  </div>
   );
     }

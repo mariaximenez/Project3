@@ -6,6 +6,7 @@ import Show from './Show'
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { Route, Routes } from "react-router-dom";
+import './index.css';
 
 const App = () => {
     const URL = "https://data.cityofnewyork.us/resource/pqg4-dm6b.json/";
@@ -18,6 +19,7 @@ const App = () => {
          <Route path="/category"  element= {<CategoryList URL={URL}/>}/>
          <Route path="/:id"  element= {<Show URL={URL}/>}/>
      </Routes>
+   
      <Footer/>
    </div>
   )
