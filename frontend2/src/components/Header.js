@@ -11,7 +11,7 @@ function Header (props) {
     };
     return (
         <header>
-            <h1>Home</h1>
+            <h1>Header</h1>
             <nav style={navStyle}>
                 <Link to="/">
                     <div>HOME</div>
