@@ -3,11 +3,11 @@ import {useState} from 'react';
 import {useEffect} from 'react';
 import {Link} from 'react-router-dom'
 import './index.css';
+import SearchBar from './components/SearchBar'
 
 
 export default function Home () {
 const [data, setData] = useState([])
-  //function to fetch facility data
 const getData = async () => {
     try {
     const url = 'https://data.cityofnewyork.us/resource/pqg4-dm6b.json';
@@ -24,16 +24,8 @@ const getData = async () => {
 useEffect(() => {
     getData(); }, []);
 return (
-  <div className='app'>
-  <input placeholder="Search" onChange={event => setData(event.target.value)}/>
-  {
-      data.map((post, index) => {
-        <div key={index}>
-          <p>{data.organizationnamw}</p>
-          <p>{data.borough}</p>
+  <div className= "app">
+    <SearchBar placeholder= "Enter a facility, borough, or category" data={data}/>
   </div>
-      })
-    }
-  </div>
-  );
+);
     }

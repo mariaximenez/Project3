@@ -1,5 +1,7 @@
 // const { default: Home } = require("Home")
 
+const { homedir } = require("os")
+
 // // From Home.js to display data 
 // return(
 //   <div>
@@ -14,3 +16,24 @@
 // <h3>{data.description}</h3>
 // </div>
 // );}
+
+
+
+
+// return for Search bar in home.js
+// <div className='app'>
+//   <input placeholder="Search" onChange={event => setData(event.target.value)}/>
+//   {
+//     data.filter(data => {
+//       if (data === (data.borough)) {
+//         return data;
+//       } else if (data === (data.organizationname)) {
+//         return data;
+//       } 
+//     }).map((data, index) => {
+//         <div className='box' key={index}>
+//           <p>{data.organizationname}</p>
+//           <p>{data.borough}</p>
+//   </div>
+//       })
+// }
