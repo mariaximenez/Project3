@@ -4,6 +4,7 @@ import {useEffect} from 'react';
 import {Link} from 'react-router-dom'
 import '../index.css';
 import SearchBar from '../components/SearchBar'
+import Body from '../components/Body'
 
 
 export default function Home () {
@@ -14,7 +15,6 @@ const getData = async () => {
     const response = await fetch(url);
     const data = await response.json();
     setData(data);
-    console.log(data);
 }
     catch(err) {
         console.log(err)
@@ -25,7 +25,7 @@ useEffect(() => {
     getData(); }, []);
 return (
   <div className= "app">
-
+    <Body/>
   </div>
 );
     }
