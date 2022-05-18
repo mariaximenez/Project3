@@ -31,11 +31,11 @@ useEffect(() => {getFilteredData();}, []);
 
 
   return (
-    <div id="borough-list">
+    <div id="list">
       {data.filter(function(item) {
     return item.bronx == 'Y';
   }).map((item, index) => (
-         <div className="borough-item" key={item}>
+         <div className="item" key={item}>
            <div className="name">{`Name: ${item.organizationname}`}</div>
            <div className="borough">{`Borough: ${item.bronx}`}</div>
            <div className="description">{`Description: ${item.description}`}</div>
