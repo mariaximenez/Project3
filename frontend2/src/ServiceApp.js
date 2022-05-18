@@ -1,6 +1,8 @@
 import React from 'react'
+import { Route, Routes } from "react-router-dom";
+import './index.css';
 import Aging from './servicepages/Aging'
-import Discriminaation from './servicepages/Discrimination'
+import Discrimination from './servicepages/Discrimination'
 import Childcare from './servicepages/Childcare'
 import Volunteer from './servicepages/Volunteer'
 import Support from './servicepages/Support'

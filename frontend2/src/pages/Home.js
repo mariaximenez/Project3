@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom'
 import '../index.css';
 import SearchBar from '../components/SearchBar'
 import Body from '../components/Body'
+import Header from '../components/Header'
 
 
 export default function Home () {
@@ -25,6 +26,7 @@ useEffect(() => {
     getData(); }, []);
 return (
   <div className= "app">
+    <Header/>
     <Body/>
   </div>
 );
