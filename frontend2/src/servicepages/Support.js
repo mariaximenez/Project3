@@ -21,11 +21,11 @@ function Support () {
   return (
     <div id="list">
       {data.filter(function(item) {
-    return item.aging === 'Y';
+    return item.counseling_support_groups === 'Y';
   }).map((item, index) => (
          <div className="item" key={item}>
            <div className="name">{`Name: ${item.organizationname}`}</div>
-           <div className="borough">{`Service: ${item.aging}`}</div>
+           <div className="borough">{`Service: ${item.counseling_support_groups}`}</div>
            <div className="description">{`Description: ${item.description}`}</div>
            <div className="phone">{`Phone: ${item.phone}`}</div>
         

@@ -21,11 +21,11 @@ function Discrimination () {
   return (
     <div id="list">
       {data.filter(function(item) {
-    return item.aging === 'Y';
+    return item.anti_discrimination_human_rights === 'Y';
   }).map((item, index) => (
          <div className="item" key={item}>
            <div className="name">{`Name: ${item.organizationname}`}</div>
-           <div className="borough">{`Service: ${item.aging}`}</div>
+           <div className="borough">{`Service: ${item.anti_discrimination_human_rights}`}</div>
            <div className="description">{`Description: ${item.description}`}</div>
            <div className="phone">{`Phone: ${item.phone}`}</div>
         
