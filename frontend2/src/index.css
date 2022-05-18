@@ -15,6 +15,8 @@ margin: 50px 20px 20px 20px;
   flex-grow: 1;
   align-self: flex-start;
   border-style: dotted;
+  border-color:#0000CD;
+  border-width: thick;
   flex: 1;
   margin: 50px 20px 20px 20px;
   padding: 10px;
@@ -29,14 +31,36 @@ margin: 50px 20px 20px 20px;
   flex-shrink: 1;
   margin: 50px 45px 60px 20px;
   border-style: dotted;
+  border-color: #66CDAA;
+  border-width: thick;
   justify-content: center;
   padding: 10px;
 
 }
 
-.background {
+.background-top {
   background-image: URL('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F38670528%2F108919755319%2F1%2Foriginal.jpg?auto=format%2Ccompress&q=75&sharp=10&s=af6bd439922cbde45d119e1ca00cc446');
-  height: 700px;
+  height: 300px;
+  background-position: bottom;
+  display: flex;
+/* flex-direction: row;
+flex-wrap: wrap; */
+flex-flow: column wrap;
+justify-content:flex-start;
+align-content: center;
+align-items: baseline;
+margin: 50px 20px 20px 20px;
+}
+
+.link-bar {
+  background-color: black;
+  align-self: flex-end;
+  margin: 200px 45px 10px 20px;
+  justify-content:flex-end;
+  display: flex;
+  border: 3px solid black;
+  padding:8px;
+  width: 90%;
 }
 
 .app {
@@ -49,12 +73,12 @@ margin: 50px 20px 20px 20px;
   }
 
   body {
-    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9RDl2Hcc_JC35zV1p1vYmDl08LRQXRD8nvQ&usqp=CAU') no-repeat center center fixed; 
+    /* background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9RDl2Hcc_JC35zV1p1vYmDl08LRQXRD8nvQ&usqp=CAU') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
-    color: white;
+    background-size: cover; */
+    color: black;
     font-size: 20px;
    
   }

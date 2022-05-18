@@ -4,39 +4,42 @@ import "../index.css";
 function Header (props) {
     const navStyle = {
         display: "flex",
-        justifyContent: "space-around",
+        justifyContent: "space-between",
         border: "3px solid black",
         padding: "8px",
         width: "90%",
         margin: "auto",
     };
     return (
-        <header className="background">
-            <h1>Header</h1>
+        <>
+        <header className="background-top">
+              </header>
+           <div class-Name="link-bar">
             <nav style={navStyle}>
                 <Link to="/">
                     <div>HOME</div>
                 </Link>
                 <Link to ="/facility">
-                    <div>Facility Dropdown Menu</div>
+                    <div>Facility Search</div>
                 </Link>
                 <Link to ="/bronx">
-                    <div>Bronx Facilities</div>
+                    <div>Bronx</div>
                 </Link>
                 <Link to ="/brooklyn">
-                    <div>Brooklyn Facilities</div>
+                    <div>Brooklyn</div>
                 </Link>
                 <Link to ="/manhattan">
-                    <div>Manhattan Facilities</div>
+                    <div>Manhattan</div>
                 </Link>
                 <Link to ="/statenisland">
-                    <div>Staten Island Facilities</div>
+                    <div>Staten Island</div>
                 </Link>
                 <Link to ="/queens">
-                    <div>Queens Facilities</div>
+                    <div>Queens</div>
                 </Link>
             </nav>
-            </header>
+            </div>
+          </>
     );
 }
     
