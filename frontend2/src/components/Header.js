@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom';
+import "../index.css";
 
 function Header (props) {
     const navStyle = {
@@ -10,7 +11,7 @@ function Header (props) {
         margin: "auto",
     };
     return (
-        <header>
+        <header className="background">
             <h1>Header</h1>
             <nav style={navStyle}>
                 <Link to="/">

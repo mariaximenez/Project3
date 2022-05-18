@@ -17,7 +17,7 @@ const App = () => {
     const URL = "https://data.cityofnewyork.us/resource/pqg4-dm6b.json/";
   return (
      <div className="App">
-     
+     <Header/>
      <Routes>
          <Route exact path="/" element={<Home URL={URL}/>}/>
          <Route path="/facility"  element= {<FacilityList URL={URL}/>}/>

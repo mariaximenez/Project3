@@ -17,6 +17,7 @@ margin: 50px 20px 20px 20px;
   border-style: dotted;
   flex: 1;
   margin: 50px 20px 20px 20px;
+  padding: 10px;
   
 }
 
@@ -29,13 +30,14 @@ margin: 50px 20px 20px 20px;
   margin: 50px 45px 60px 20px;
   border-style: dotted;
   justify-content: center;
-
-
-
+  padding: 10px;
 
 }
 
-
+.background {
+  background-image: URL('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F38670528%2F108919755319%2F1%2Foriginal.jpg?auto=format%2Ccompress&q=75&sharp=10&s=af6bd439922cbde45d119e1ca00cc446');
+  height: 700px;
+}
 
 .app {
     display: flex;

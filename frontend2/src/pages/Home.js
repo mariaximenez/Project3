@@ -26,7 +26,7 @@ useEffect(() => {
     getData(); }, []);
 return (
   <div className= "app">
-    <Header/>
+  
     <Body/>
   </div>
 );
