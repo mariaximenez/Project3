@@ -37,3 +37,27 @@ const { homedir } = require("os")
 //   </div>
 //       })
 // }
+
+
+
+
+
+// return Bronx all data
+// <div className= "dataResult">
+//         {data.map((value, key) => {
+//           return (
+//             <a className="dataItem" href={value.url} target="_blank">
+//             <p>{value.organizationname}</p>
+//             </a>
+//           );
+//         })}
+//     </div>
+
+
+{/* <div>
+{data.filter(data => data.includes('bronx')).map(filteredData => (
+  <li>
+    {filteredData}
+  </li>
+))}
+</div> */}
