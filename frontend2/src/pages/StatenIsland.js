@@ -23,13 +23,20 @@ function StatenIsland () {
       {data.filter(function(item) {
     return item.staten_island === 'Y';
   }).map((item, index) => (
-         <div className="item" key={item}>
-           <div className="name">{`Name: ${item.organizationname}`}</div>
-           <div className="borough">{`Borough: ${item.staten_island}`}</div>
-           <div className="description">{`Description: ${item.description}`}</div>
-           <div className="phone">{`Phone: ${item.phone}`}</div>
-        
-         </div>
+    <div className="container">
+    <div className="object" key={item}>
+     <div className="name">{`${item.organizationname}`}</div>
+     <div className="phone">{`${item.phone}`}</div>
+     <div className="address1">{`${item.address1}`}</div>
+     <div className="address2">{`${item.address2}`}</div>
+     <div className="city">{`${item.city}`}</div>
+     <div className="postcode">{`${item.postcode}`}</div>
+     </div>
+     
+     
+     <div className="description" key={item}>{`${item.description}`}</div>
+    
+   </div>
       ))}
     </div>
   );

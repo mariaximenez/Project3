@@ -3,51 +3,41 @@ import "../index.css";
 import { useState, useEffect } from 'react';
 
 function Bronx () {
-const [data, setData] = useState([]);
-const [filteredData, setFilteredData] = useState([]);
-  const getBronxData = async () => {
-      try {
-        const url = 'https://data.cityofnewyork.us/resource/pqg4-dm6b.json/';
-        const response = await fetch(url);
-        const data = await response.json();
-        setData(data);
+  const [data, setData] = useState([]);
+    const getBoroughData = async () => {
+        try {
+          const url = 'https://data.cityofnewyork.us/resource/pqg4-dm6b.json/';
+          const response = await fetch(url);
+          const data = await response.json();
+          setData(data);
+        }
+        catch(err) {
+          console.log(err)
       }
-      catch(err) {
-        console.log(err)
-    }
-  };
-  useEffect(() => {getBronxData();}, []);
-  
-  function getFilteredData () {
-  let filteredData = data.filter(function(item) {
-    return item.bronx == 'Y';
-  }).map(function({organizationname}){
-    return {organizationname};
-  });
-  }
-  
-
-useEffect(() => {getFilteredData();}, []);
-
-
+    };
+    useEffect(() => {getBoroughData();}, []);
   return (
     <div id="list">
       {data.filter(function(item) {
-    return item.bronx == 'Y';
+    return item.bronx === 'Y';
   }).map((item, index) => (
-         <div className="item" key={item}>
-           <div className="name">{`Name: ${item.organizationname}`}</div>
-           <div className="borough">{`Borough: ${item.bronx}`}</div>
-           <div className="description">{`Description: ${item.description}`}</div>
-           <div className="phone">{`Phone: ${item.phone}`}</div>
-        
-         </div>
+    <div className="container">
+    <div className="object" key={item}>
+     <div className="name">{`${item.organizationname}`}</div>
+     <div className="phone">{`${item.phone}`}</div>
+     <div className="address1">{`${item.address1}`}</div>
+     <div className="address2">{`${item.address2}`}</div>
+     <div className="city">{`${item.city}`}</div>
+     <div className="postcode">{`${item.postcode}`}</div>
+     </div>
+     
+     
+     <div className="description" key={item}>{`${item.description}`}</div>
+    
+   </div>
       ))}
     </div>
   );
           }
-        
-         
 
-
-export default Bronx;
+export default Bronx
