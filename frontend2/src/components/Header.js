@@ -16,9 +16,6 @@ function Header (props) {
                 <Link to="/">
                     <div>HOME</div>
                 </Link>
-                <Link to="/borough">
-                    <div>By Borough</div>
-                </Link>
                 <Link to ="/facility">
                     <div>Facility Dropdown Menu</div>
                 </Link>

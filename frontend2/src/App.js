@@ -1,6 +1,5 @@
 import React from 'react'
 import Home from './pages/Home'
-import BoroughList from './pages/BoroughList'
 import FacilityList from './pages/FacilityList'
 import Show from './pages/Show'
 import Header from "./components/Header";
@@ -20,7 +19,6 @@ const App = () => {
      <Header/>
      <Routes>
          <Route exact path="/" element={<Home URL={URL}/>}/>
-         <Route path="/borough" element={<BoroughList URL={URL}/>}/>
          <Route path="/facility"  element= {<FacilityList URL={URL}/>}/>
          <Route path="/:id"  element= {<Show URL={URL}/>}/>
          <Route path="/bronx"  element= {<Bronx URL={URL}/>}/>
