@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 
 
-function Aging () {
+function Immigration () {
   const [data, setData] = useState([]);
     const getServiceData = async () => {
         try {
@@ -25,7 +25,7 @@ function Aging () {
   }).map((item, index) => (
          <div className="item" key={item}>
            <div className="name">{`Name: ${item.organizationname}`}</div>
-           <div className="borough">{`Borough: ${item.aging}`}</div>
+           <div className="borough">{`Service: ${item.aging}`}</div>
            <div className="description">{`Description: ${item.description}`}</div>
            <div className="phone">{`Phone: ${item.phone}`}</div>
         
@@ -35,4 +35,4 @@ function Aging () {
   );
           }
 
-export default Aging
+export default Immigration
