@@ -1,6 +1,7 @@
 import React from "react";
 import "../index.css";
 import { useState, useEffect } from 'react';
+import Grid from '../Grid';
 
 
 
@@ -23,11 +24,18 @@ function Discrimination () {
       {data.filter(function(item) {
     return item.anti_discrimination_human_rights === 'Y';
   }).map((item, index) => (
-         <div className="item" key={item}>
+         <div className="item1" key={item}>
+           <Grid/>
            <div className="name">{`Name: ${item.organizationname}`}</div>
-           <div className="borough">{`Service: ${item.anti_discrimination_human_rights}`}</div>
-           <div className="description">{`Description: ${item.description}`}</div>
            <div className="phone">{`Phone: ${item.phone}`}</div>
+           <div className="address1">{`Address: ${item.address1}`}</div>
+           <div className="address2">{`Address: ${item.address2}`}</div>
+           <div className="city">{`City: ${item.city}`}</div>
+           <div className="postcode">{`Postcode: ${item.postcode}`}</div>
+
+           <div className="item2" key={item}>
+           <div className="description">{`Description: ${item.description}`}</div>
+           </div>
         
          </div>
       ))}
