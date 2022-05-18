@@ -3,7 +3,7 @@ import '../index.css';
 
 const Show = () => {
   return (
-    <div>Show</div>
+    <div></div>
   )
 }
 

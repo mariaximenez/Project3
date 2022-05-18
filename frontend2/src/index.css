@@ -1,3 +1,42 @@
+.container {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content:space-between;
+align-content: center;
+align-items: baseline;
+margin: 50px 20px 20px 20px;
+
+}
+
+
+.object {
+  order: 1;
+  flex-grow: 1;
+  align-self: flex-start;
+  border-style: dotted;
+  flex: 1;
+  margin: 50px 20px 20px 20px;
+  
+}
+
+.description {
+  order: 2;
+  flex-grow: 2;
+  align-self: flex-end;
+  flex: 5;
+  flex-shrink: 1;
+  margin: 50px 45px 60px 20px;
+  border-style: dotted;
+  justify-content: center;
+
+
+
+
+}
+
+
+
 .app {
     display: flex;
     flex-direction: column;
@@ -78,15 +117,13 @@
   
   #clearBtn {
     cursor: pointer;
-  }
+  } 
 
 
-  .container {
-    display: grid;
-    grid-template-columns: 10rem 10rem 10rem;
-    grid-gap: 1rem;
-    grid-auto-flow: row;
-  }
+
+
+  
+ 
 
 
 

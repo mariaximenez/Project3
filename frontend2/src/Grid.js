@@ -1,13 +1,17 @@
-import React from 'react'
+// import React from 'react'
 
-export default function Grid () {
+// export default function Grid () {
   
-  return (
+//   return (
     
-    <div className="container">
-      <div className="item1">1</div>
-      <div className="item2">2</div>
-    </div>
+//     <div className="container">
+//       <div className="item1"></div>
+//       <div className="item2"></div>
+//     </div>
     
-  )
-}
+//   )
+// }
+
+
+
+
