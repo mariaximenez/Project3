@@ -14,6 +14,7 @@ import Queens from './pages/Queens'
 const App = () => {
     const URL = "https://data.cityofnewyork.us/resource/pqg4-dm6b.json/";
   return (
+    <div>
      <div className="App">
      <Header/>
      <Routes>
@@ -24,8 +25,9 @@ const App = () => {
          <Route path="/statenisland"  element= {<StatenIsland URL={URL}/>}/>
          <Route path="/queens"  element= {<Queens URL={URL}/>}/>
    </Routes>
-     <Footer/>
    </div>
+   <Footer/>
+    </div>
   )
 }
 

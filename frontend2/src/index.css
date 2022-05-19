@@ -313,10 +313,15 @@ margin: 50px 20px 20px 20px;
 }
 
 .footer {
-  font-size: 15px;
+  font-size: 10px;
   color: black;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-self: flex-end;
+  order: 20;
+  justify-content: flex-end;
+  margin: 0px 60px 0px 0px;
 }
 
 .app {
