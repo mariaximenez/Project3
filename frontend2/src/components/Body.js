@@ -2,71 +2,64 @@ import {Link} from 'react-router-dom';
 import "../index.css";
 
 function Body (props) {
-    const navStyle = {
-        display: "flex",
-        justifyContent: "space-around",
-        border: "3px solid black",
-        padding: "8px",
-        width: "90%",
-        margin: "auto",
-    };
+   
     return (
         <body>
             <h1>Body</h1>
-            <div style={navStyle}>
+            <div className="container_category">
                 <Link to="/aging">
-                    <div>Aging</div>
+                    <div className='category_one'>Aging</div>
                 </Link>
                 <Link to ="/discrimination">
-                    <div>Anti-Discrimination</div>
+                    <div className='category_two'>Anti-Discrimination</div>
                 </Link>
                 <Link to ="/childcare">
-                    <div>Child Care</div>
+                    <div className='category_three'>Child Care</div>
                 </Link>
                 <Link to ="/volunteer">
-                    <div>Volunteer</div>
+                    <div className='category_four'>Volunteer</div>
                 </Link>
                 <Link to ="/support">
-                    <div>Support Groups</div>
+                    <div className='category_five'>Support Groups</div>
                 </Link>
                 <Link to ="/disabilities">
-                    <div>Disabilities</div>
+                    <div className='category_six'>Disabilities</div>
                 </Link>
                 <Link to ="/domesticviolence">
-                    <div>Domestic Violence</div>
+                    <div className='category_seven'>Domestic Violence</div>
                 </Link>
                 <Link to="/education">
-                    <div>Education</div>
+                    <div className='category_eight'>Education</div>
                 </Link>
                 <Link to ="/employment">
-                    <div>Employment</div>
+                    <div className='category_nine'>Employment</div>
                 </Link>
                 <Link to ="/health">
-                    <div>Health</div>
+                    <div className='category_ten'>Health</div>
                 </Link>
                 <Link to ="/homeless">
-                    <div>Homeless</div>
+                    <div className='category_eleven'>Homeless</div>
                 </Link>
                 <Link to ="/housing">
-                    <div>Housing</div>
+                    <div className='category_twelve'>Housing</div>
                 </Link>
                 <Link to ="/immigration">
-                    <div>Immigration</div>
+                    <div className='category_thirteen'>Immigration</div>
                 </Link>
                 <Link to ="/legal">
-                    <div>Legal Services</div>
+                    <div className='category_fourteen'>Legal Services</div>
                 </Link>
                 <Link to="/lgbtq">
-                    <div>LGBTQ</div>
+                    <div className='category_fifteen'>LGBTQ</div>
                 </Link>
                 <Link to ="/victim">
-                    <div>Victim Services</div>
+                    <div className='category_sixteen'>Victim Services</div>
                 </Link>
                 <Link to ="/youth">
-                    <div>Youth Services</div>
+                    <div className='category_seventeen'>Youth Services</div>
                 </Link>
                 <Link to ="/veteran">
-                    <div>Veteran Families</div>
+                    <div className='category_eighteen'>Veteran Families</div>
                 </Link>
                 
             </div>
