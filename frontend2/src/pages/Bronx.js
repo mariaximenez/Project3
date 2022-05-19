@@ -1,7 +1,7 @@
 import React from "react";
 import "../index.css";
 import { useState, useEffect } from 'react';
-import {Link} from 'react-router-dom';
+
 function Bronx (props) {
   const [data, setData] = useState([]);
   const getBoroughData = async () => {
@@ -36,7 +36,6 @@ function Bronx (props) {
                 <div className="city">{`${eachItem.city}`}</div>
                 <div className="postcode">{`${eachItem.postcode}`}</div>
                 <div className="description">{`${eachItem.description}`}</div>
-                <Link to={`/bronx/${eachItem.organizationname}`}>Show Page</Link>
               </div>
             </div>
           )

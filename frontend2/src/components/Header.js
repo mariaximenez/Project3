@@ -19,9 +19,6 @@ function Header (props) {
                 <Link to="/">
                     <div>HOME</div>
                 </Link>
-                <Link to ="/facility">
-                    <div>Facility Search</div>
-                </Link>
                 <Link to ="/bronx">
                     <div>Bronx</div>
                 </Link>
