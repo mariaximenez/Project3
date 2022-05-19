@@ -3,11 +3,9 @@ import "../index.css";
 import { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom';
 
-
-
 function Aging () {
   const [data, setData] = useState([]);
-    const getServiceData = async () => {
+    const getBoroughData = async () => {
         try {
           const url = 'https://data.cityofnewyork.us/resource/pqg4-dm6b.json/';
           const response = await fetch(url);
@@ -18,7 +16,7 @@ function Aging () {
           console.log(err)
       }
     };
-    useEffect(() => {getServiceData();}, []);
+    useEffect(() => {getBoroughData();}, []);
   return (
     <div id="list">
       {data.filter(function(item) {
@@ -36,7 +34,7 @@ function Aging () {
      <Link to={`/aging/${ item.id}`} key={ item.id }>Edit</Link>
      </div>
      
-     
+    
      <div className="description" key={item}>{`${item.description}`}</div>
     
    </div>
