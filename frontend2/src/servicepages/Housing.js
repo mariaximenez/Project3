@@ -25,7 +25,8 @@ function Housing () {
   }).map((item, index) => (
     <div className="container">
     <div className="object" key={item}>
-     <div className="name">{`${item.organizationname}`}</div>
+    <a className="dataItem" href={item.url} target="_blank">
+    <p>{item.organizationname}</p></a>
      <div className="phone">{`${item.phone}`}</div>
      <div className="address1">{`${item.address1}`}</div>
      <div className="address2">{`${item.address2}`}</div>
