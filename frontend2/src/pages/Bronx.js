@@ -24,7 +24,7 @@ function Bronx () {
   }).map((item, index) => (
     <div className="container">
     <div className="object" key={item}>
-    <a className="dataItem" href={item.url} target="_blank">
+    <a className="dataItem" href={item.url} target="_blank" rel="noopener noreferrer">
     <p>{item.organizationname}</p></a>
      <div className="phone">{`${item.phone}`}</div>
      <div className="address1">{`${item.address1}`}</div>
