@@ -63,6 +63,12 @@ margin: 50px 20px 20px 20px;
   width: 90%;
 }
 
+.message {
+  color: #6A5ACD;
+  margin: 20px 200px 20px 200px;
+  text-align: center;
+
+}
 
 
 .container_category {

@@ -5,7 +5,7 @@ function Body (props) {
    
     return (
         <body>
-            <h1>Body</h1>
+            <h1 className='message'>Empowerment starts with seeking the help you need. NYC is rich with resources for women. This site allows you to search facilities by borough or category. Click a link and peruse the facilities. Visit the facility website or plan an in-person trip. NYC is here to help you.</h1>
             <div className="container_category">
                 <Link to="/aging">
                     <div className='category_one'>Aging</div>
