@@ -1,6 +1,7 @@
 import React from "react";
 import "../index.css";
 import { useState, useEffect } from 'react';
+import {Link} from 'react-router-dom';
 
 function Bronx () {
   const [data, setData] = useState([]);
@@ -30,9 +31,10 @@ function Bronx () {
      <div className="address2">{`${item.address2}`}</div>
      <div className="city">{`${item.city}`}</div>
      <div className="postcode">{`${item.postcode}`}</div>
+     <Link to={`/bronx/${ item.id}`} key={ item.id }>Edit</Link>
      </div>
      
-     
+    
      <div className="description" key={item}>{`${item.description}`}</div>
     
    </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import "../index.css";
 import { useState, useEffect } from 'react';
+import {Link} from 'react-router-dom';
 
 
 
@@ -32,6 +33,7 @@ function Childcare () {
      <div className="address2">{`${item.address2}`}</div>
      <div className="city">{`${item.city}`}</div>
      <div className="postcode">{`${item.postcode}`}</div>
+     <Link to={`/childcare/${ item.id}`} key={ item.id }>Edit</Link>
      </div>
      
      
