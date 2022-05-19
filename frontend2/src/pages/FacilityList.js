@@ -1,7 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
 import {useEffect} from 'react';
-import {Link} from 'react-router-dom'
 import '../index.css';
 import SearchBar from '../components/SearchBar'
 
@@ -25,7 +24,7 @@ useEffect(() => {
     getData(); }, []);
 return (
   <div className= "app">
-    <SearchBar placeholder= "Enter facility name" data={data}/>
+    <SearchBar placeholder= "Facility Drop Down" data={data}/>
   </div>
 );
     }

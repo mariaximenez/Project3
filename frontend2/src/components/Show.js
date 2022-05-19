@@ -1,29 +1,51 @@
 import React from "react";
 import "../index.css";
 import { useParams } from 'react-router-dom'
+import { useState, useEffect } from 'react';
 
+function Show (props) {
+    let params = useParams ()
+    console.log(params)
+    const [data, setData] = useState([]);
+    const fetchData = async () => {
+        try {
+          const url = props.URL;
+          const response = await fetch(url);
+          const data = await response.json();
+         const result=data.find(item =>
+          item.organizationname === params.id )
+          console.log(result)
+          setData (result) 
+        }
+        catch(err) {
+          console.log(err)
+      }
+    };
+    useEffect(() => {fetchData();}, []);
 
-function Show () {
-    let params = useParams
-  return (
-  <div className="container">
-  <div className="object" key={item.{theSelectedFacilityID}}>"
-    <a className="dataItem" href={item.{theSelectedFacilityID}.url} target="_blank" rel="noopener noreferrer">
-    <p>{item.{theSelectedFacilityID}.organizationname}</p></a>
-     <div className="phone">{`${item.{theSelectedFacilityID}.phone}`}</div>
-     <div className="address1">{`${item.{theSelectedFacilityID}.address1}`}</div>
-     <div className="address2">{`${item.{theSelectedFacilityID}.address2}`}</div>
-     <div className="city">{`${item.{theSelectedFacilityID}.city}`}</div>
-     <div className="postcode">{`${item.{theSelectedFacilityID}.postcode}`}</div>
+        if (data.organizationname) {
+          return (
+    <div className="container">
+    <div className="object" key={data}>
+     <div className="phone">{`${data.organizationname}`}</div>
+     <div className="address1">{`${data.address1}`}</div>
+     <div className="address2">{`${data.address2}`}</div>
+     <div className="city">{`${data.city}`}</div>
+     <div className="postcode">{`${data.postcode}`}</div>
      </div>
-     
-    
-     <div className="description" key={item}>{`${item.{theSelectedFacilityID}.description}`}</div>
-     }
+          )
+          else {
+             (
+              <div>
+              <h2>No resource data available</h2>
+              </div>
+          )};
+          
    </div>
-      ))}
-    </div>
-  );
+      )}
+
+  ;
           }
 
+   
   export default Show
