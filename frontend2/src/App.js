@@ -1,7 +1,7 @@
 import React from 'react'
 import Home from './pages/Home'
 import FacilityList from './pages/FacilityList'
-import Show from './pages/Show'
+import Show from './components/Show'
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { Route, Routes } from "react-router-dom";
