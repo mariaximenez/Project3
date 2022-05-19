@@ -27,8 +27,6 @@ const App = () => {
          <Route path="/manhattan"  element= {<Manhattan URL={URL}/>}/>
          <Route path="/statenisland"  element= {<StatenIsland URL={URL}/>}/>
          <Route path="/queens"  element= {<Queens URL={URL}/>}/>
-
-
      </Routes>
    
      <Footer/>
