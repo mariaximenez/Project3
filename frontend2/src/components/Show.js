@@ -1,42 +1,25 @@
 import React from "react";
 import "../index.css";
-import { useState, useEffect } from 'react';
-import {Link} from 'react-router-dom';
+import { useParams } from 'react-router-dom'
+
 
 function Show () {
-  const [data, setData] = useState([]);
-    const getBoroughData = async () => {
-        try {
-          const url = 'https://data.cityofnewyork.us/resource/pqg4-dm6b.json/';
-          const response = await fetch(url);
-          const data = await response.json();
-          setData(data);
-        }
-        catch(err) {
-          console.log(err)
-      }
-    };
-    useEffect(() => {getBoroughData();}, []);
+    let params = useParams
   return (
-    <div id="list">
-      {data.filter(function(item) {
-    return item.aging === 'Y';
-  }).map((item, index) => (
-    <div className="container">
-    <div className="object" key={item}>
-    <a className="dataItem" href={item.url} target="_blank">
-    <p>{item.organizationname}</p></a>
-     <div className="phone">{`${item.phone}`}</div>
-     <div className="address1">{`${item.address1}`}</div>
-     <div className="address2">{`${item.address2}`}</div>
-     <div className="city">{`${item.city}`}</div>
-     <div className="postcode">{`${item.postcode}`}</div>
-     <Link to={`/aging/${ item.id}`} key={ item.id }>Edit</Link>
+  <div className="container">
+  <div className="object" key={item.{theSelectedFacilityID}}>"
+    <a className="dataItem" href={item.{theSelectedFacilityID}.url} target="_blank" rel="noopener noreferrer">
+    <p>{item.{theSelectedFacilityID}.organizationname}</p></a>
+     <div className="phone">{`${item.{theSelectedFacilityID}.phone}`}</div>
+     <div className="address1">{`${item.{theSelectedFacilityID}.address1}`}</div>
+     <div className="address2">{`${item.{theSelectedFacilityID}.address2}`}</div>
+     <div className="city">{`${item.{theSelectedFacilityID}.city}`}</div>
+     <div className="postcode">{`${item.{theSelectedFacilityID}.postcode}`}</div>
      </div>
      
     
-     <div className="description" key={item}>{`${item.description}`}</div>
-    
+     <div className="description" key={item}>{`${item.{theSelectedFacilityID}.description}`}</div>
+     }
    </div>
       ))}
     </div>

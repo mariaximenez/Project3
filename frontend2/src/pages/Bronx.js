@@ -31,7 +31,10 @@ function Bronx () {
      <div className="address2">{`${item.address2}`}</div>
      <div className="city">{`${item.city}`}</div>
      <div className="postcode">{`${item.postcode}`}</div>
-     <Link to={`/bronx/${ item.id}`} key={ item.id }>Edit</Link>
+     {data.filter(function(item) {
+     item.bronx.map((item, index) =>{
+      <Link to={`/bronx/${theSelectedFacilityId}`} key={theSelectedFacilitysId}>Show</Link> 
+     }
      </div>
      
     
