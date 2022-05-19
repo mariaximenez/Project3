@@ -2,46 +2,47 @@ import React from "react";
 import "../index.css";
 import { useState, useEffect } from 'react';
 
-
-
-
-function StatenIsland () {
+function StatenIsland (props) {
   const [data, setData] = useState([]);
-    const getBoroughData = async () => {
-        try {
-          const url = 'https://data.cityofnewyork.us/resource/pqg4-dm6b.json/';
-          const response = await fetch(url);
-          const data = await response.json();
-          setData(data);
-        }
-        catch(err) {
-          console.log(err)
+  const getBoroughData = async () => {
+      try {
+        const url = 'https://data.cityofnewyork.us/resource/pqg4-dm6b.json/';
+        const response = await fetch(url);
+        const data = await response.json();
+        const onlyStatenIsland = data.filter((eachItem) => {
+          return eachItem.statenisland === "Y"
+        })
+        setData(onlyStatenIsland);
       }
-    };
-    useEffect(() => {getBoroughData();}, []);
+      catch(err) {
+        console.log(err)
+      }
+  };
+  
+  useEffect(() => {getBoroughData();}, []);
   return (
     <div id="list">
-      {data.filter(function(item) {
-    return item.staten_island === 'Y';
-  }).map((item, index) => (
-    <div className="container">
-    <div className="object" key={item}>
-    <a className="dataItem" href={item.url} target="_blank" rel="noopener noreferrer">
-    <p>{item.organizationname}</p></a>
-     <div className="phone">{`${item.phone}`}</div>
-     <div className="address1">{`${item.address1}`}</div>
-     <div className="address2">{`${item.address2}`}</div>
-     <div className="city">{`${item.city}`}</div>
-     <div className="postcode">{`${item.postcode}`}</div>
-     </div>
-     
-     
-     <div className="description" key={item}>{`${item.description}`}</div>
-    
-   </div>
-      ))}
+      {
+        data.map((eachItem, idx) => {
+          return (
+            <div className="container" key={idx}>
+              <div className="object">
+                <a className="dataItem" href={eachItem.url} target="_blank" rel="noopener noreferrer">
+                  <p>{eachItem.organizationname}</p>
+                </a>
+                <div className="phone">{`${eachItem.phone}`}</div>
+                <div className="address1">{`${eachItem.address1}`}</div>
+                <div className="address2">{`${eachItem.address2}`}</div>
+                <div className="city">{`${eachItem.city}`}</div>
+                <div className="postcode">{`${eachItem.postcode}`}</div>
+                <div className="description">{`${eachItem.description}`}</div>
+              </div>
+            </div>
+          )
+        })
+      }
     </div>
   );
-          }
+}
 
 export default StatenIsland
